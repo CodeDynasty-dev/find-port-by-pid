@@ -8,7 +8,7 @@
     "dist"
   ],
   "repository": "CodeDynasty-dev/find-port-by-pid",
-  "funding": "https://github.com/fridaycandour/sindresorhus",
+  "funding": "https://github.com/sponsors/fridaycandour",
   "author": {
     "name": "Friday Candour",
     "email": "Fridaycandours@gmial.com",
@@ -25,9 +25,5 @@
     "network",
     "cross-platform"
   ],
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "private": true
+  "license": "MIT"
 }
