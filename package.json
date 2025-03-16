@@ -1,0 +1,33 @@
+{
+  "name": "find-port-by-pid",
+  "version": "1.0.0",
+  "description": "Cross-platform utility to find ports used by a process ID",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "CodeDynasty-dev/find-port-by-pid",
+  "funding": "https://github.com/fridaycandour/sindresorhus",
+  "author": {
+    "name": "Friday Candour",
+    "email": "Fridaycandours@gmial.com",
+    "url": "https://github.com/fridaycandour"
+  },
+  "type": "module",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "keywords": [
+    "port",
+    "pid",
+    "process",
+    "network",
+    "cross-platform"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true
+}
