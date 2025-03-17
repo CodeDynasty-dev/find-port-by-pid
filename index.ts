@@ -30,7 +30,7 @@ export async function findPortByPid(pid: number): Promise<string[] | null> {
           return;
         }
         // Each line should be a port number.
-        const ports = trimmed.split('\n').map((line: string) => line.trim()).filter(Boolean);
+        const ports = trimmed.split('\n').map((line: string) => line.trim()).filter((p) => p.length === 4);
         resolve(ports.length > 0 ? ports : null);
       });
     });
