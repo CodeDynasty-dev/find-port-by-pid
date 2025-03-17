@@ -1,6 +1,6 @@
 {
   "name": "find-port-by-pid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cross-platform utility to find ports used by a process ID",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
