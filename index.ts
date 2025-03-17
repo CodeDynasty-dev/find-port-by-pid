@@ -58,7 +58,7 @@ export async function findPortByPid(pid: number): Promise<string[] | null> {
           for (const part of parts) {
             if (part.includes(':')) {
               const maybePort = part.split(':').pop();
-              if (maybePort && /^\d+$/.test(maybePort) && !ports.includes(maybePort)) {
+              if (maybePort && /^\d{4}$/.test(maybePort) && !ports.includes(maybePort)) {
                 ports.push(maybePort);
               }
             }
@@ -77,7 +77,7 @@ export async function findPortByPid(pid: number): Promise<string[] | null> {
       // Read both IPv4 and IPv6 TCP connections.
       const tcpPorts = await getPortsFromProcNet('/proc/net/tcp', inodeSet);
       const tcp6Ports = await getPortsFromProcNet('/proc/net/tcp6', inodeSet);
-      const allPorts = Array.from(new Set([...tcpPorts, ...tcp6Ports]));
+      const allPorts = Array.from(new Set([...tcpPorts, ...tcp6Ports])).filter((p)=>p.length === 4);
       return allPorts.length > 0 ? allPorts : null;
     } catch (err: any) {
       throw new Error(`Error reading Linux network info: ${err.message}`);
